@@ -32,10 +32,10 @@ public class list {
             insert_at_start(data);
             return;
         }
-        if(index == size){
-            insert_at_last(data);
-            return;
-        }
+//        if(index == size){
+//            insert_at_last(data);
+//            return;
+//        }
         node temp = head;
         node newnode = new node(data,temp.next);
         for(int i = 1;i<index;i++){
@@ -45,6 +45,20 @@ public class list {
         temp.next = newnode;
         size++;
     }
+    public int delete_from_starting(){
+        if(head == null){
+            System.out.println("linked list is empty");
+            return -1;
+        }
+        int val = head.value;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+    }
+
     public void display(){
         node temp = head;
         for (int i=0;i<size;i++){
