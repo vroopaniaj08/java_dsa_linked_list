@@ -1,7 +1,4 @@
 package Linked_list.java_dsa_linked_list;
-
-import Linked_list.java_dsa_linked_list.list;
-
 public class main {
     public static void main(String[] args) {
         list list = new list();
