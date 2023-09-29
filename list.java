@@ -58,7 +58,24 @@ public class list {
         size--;
         return val;
     }
-
+    public int delete_from_last(){
+        if(size <= 1){
+            return delete_from_starting();
+        }
+        node secondlast = get(size-2);
+        int val = tail.value;
+        tail = secondlast;
+        tail.next = null;
+        size--;
+        return val;
+    }
+    public node get (int index){
+        node newnode = head;
+        for (int i=0;i<index;i++){
+            newnode = newnode.next;
+        }
+        return newnode;
+    }
     public void display(){
         node temp = head;
         for (int i=0;i<size;i++){

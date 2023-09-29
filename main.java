@@ -19,9 +19,11 @@ public class main {
         list.delete_from_starting();             // delete_from_starting
         list.delete_from_starting();             // delete_from_starting
         list.delete_from_starting();             // delete_from_starting
-        list.delete_from_starting();             // delete_from_starting
-        list.delete_from_starting();             // delete_from_starting
-        list.delete_from_starting();             // delete_from_starting
+//        list.delete_from_starting();             // delete_from_starting
+//        list.delete_from_starting();             // delete_from_starting
+//        list.delete_from_starting();             // delete_from_starting
         list.display();                          // display
+        list.delete_from_last();
+        list.display();
     }
 }
