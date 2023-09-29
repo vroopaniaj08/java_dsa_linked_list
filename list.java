@@ -69,6 +69,19 @@ public class list {
         size--;
         return val;
     }
+    public int delete_from_index(int index){
+        if(index == 0){
+            return delete_from_starting();
+        }
+        if(index == size -1){
+            return delete_from_last();
+        }
+        node prev = get(index-1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        size--;
+        return val;
+    }
     public node get (int index){
         node newnode = head;
         for (int i=0;i<index;i++){
