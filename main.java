@@ -11,6 +11,7 @@ public class main {
         list.insert_at_start(12);
         list.insert_at_last(2);
         list.insert_at_last(1);
+        list.insert_at_middle(11,1);
         list.display();
     }
 }

@@ -27,6 +27,24 @@ public class list {
         tail = newnode;
         size++;
     }
+    public void insert_at_middle(int data,int index){
+        if(index == 0){
+            insert_at_start(data);
+            return;
+        }
+        if(index == size){
+            insert_at_last(data);
+            return;
+        }
+        node temp = head;
+        node newnode = new node(data,temp.next);
+        for(int i = 1;i<index;i++){
+            temp = temp.next;
+        }
+        newnode.next = temp.next;
+        temp.next = newnode;
+        size++;
+    }
     public void display(){
         node temp = head;
         for (int i=0;i<size;i++){
